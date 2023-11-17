@@ -1,3 +1,12 @@
+
+
+@media screen and (max-width:590) {
+.header .navbar a {
+flex-direction: column;
+}
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +15,7 @@
  }
 
  body {
-    background: #aad0f0
+    background: #000000
 
  } 
 
@@ -16,7 +25,7 @@
     left: 0;
     width: 100%;
     padding: 20px;
-    background-color: transparent;
+    background-color:rgba(0, 139, 19, 0.271);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,6 +37,7 @@
     color:black ;
     text-decoration: none;
     font-weight: 800;
+    margin-left: 40px;
 }
 
 .navbar a {
@@ -36,22 +46,22 @@
     text-decoration: none;
     font-weight: 600;
     margin-left: 35px;
-    transition: .3s;
+    transition: .4s;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: #324453;
+    color: #000000;
 }
 
 .home {
-    background: url(Background.png) no-repeat;
+    background: url(background.jpg) no-repeat;
 background-size: cover;
 background-position: center;
     height: 100vh;
     display: flex;
     align-items:center ;
-    padding: 0 10%;
+    padding: 0 5%;
 }
 
 .home-content {
@@ -61,19 +71,20 @@ background-position: center;
 }
 
 .home-content h1 {
-    font-size: 58px;
+    font-size: 48px;
     font-weight: 800;
 }
 
 .home-content h3 {
-    font-size: 34px;
+    font-size: 30px;
     font: weight 800px; 
-    color: #4c00ff;
+    color: rgb(0, 0, 0);
 }
 
 .home-content p {
     margin: 10px 0 40px;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .home-content .btn-box {
@@ -89,8 +100,7 @@ background-position: center;
     align-items: center;
     width: 150px;
     height: 100%;
-    background-color: #4c00ff;
-    border: 1px solid #4c00ff;
+    background-color: #307c50;
     border-radius: 8px;
     font-size: 18px;
     font-weight: 700;
@@ -102,7 +112,7 @@ background-position: center;
 }
 
 .btn-box a:hover {
-    color: #4c00ff;  
+    color: #307c50;  
 }
 
 .btn-box a::before {
@@ -159,7 +169,7 @@ color: rgb(255, 255, 255);
     left: 0;
     width: 0;
     height: 100%;
-    background: #8ce4f3;
+    background: #389654;
     z-index: -1;
     transition: .5s;
 }
@@ -169,63 +179,335 @@ width: 100%;
 
 }
 
+
 /*CONTACT-PAGE*/
 
+/*MAIN*/
+
 .contact {
-    background: url(Background.png) no-repeat;
-background-size: cover;
-background-position: center;
-    height: 100vh;
-    display: flex;
- 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 500px;
+}
+    
+
+.contact-me {
+grid-column: 2/4;
+grid-row: 1;
+margin-top: 100px;
+background-attachment: fixed;
+
 }
 
 .contact-container {
-width: 80%;
-margin: 80px auto ; 
-
+ grid-column: 2/4 ;
+ grid-row: 2/4;
+ background-color: white;
+ box-shadow: 10px 10px 10px rgb(39, 39, 39);
+ margin-top: 40px;
+ 
+ 
 }
 
-.box-contact {
+.reach-container {
+    grid-column: 4/5;
+    grid-row: 2/4;
+    background-color: #255e36;  
+    box-shadow: 10px 10px 10px -1px rgb(39, 39, 39);
+    margin-top: 40px;
+}
+
+.contact-me h1  {
+    font-size: 34px;
+    width: 300px;   
+}
+
+.contact-me p {
+    font-size: 18px;
+    width: 300px;
+}
+
+.contact-container h1 {
+    font-weight: 600;
+    text-align:start;
+    padding-left: 10px;
+}
+
+.reach-container p{ 
+    font-weight: 600;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+.reach-container h2, h4, h6 {
+    font-size: 14px;
+    line-height: 1.2;
+    font-family: sans-serif;
+    color: aliceblue;
+    padding: 10px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.input-field{
     display: flex;
-    background-color: azure;
+    margin-left: 10px;
+    display: flex;
+    width: 300px;
+    padding: 5px;
+    border: 1px solid black;
+
+
+    
+ }
+ .contact-container:nth-child(2) {
+    text-align:end; 
+    padding: 10px;
+ }
+
+ .input-field {
+    margin-left: 2%; 
+    margin-bottom: 20px;
+    margin-top: 30px;
+ }
+ 
+.textarea-field {
+    resize: none;
 }
 
-.contact-left {
-    flex-basis: 60%;
-    padding: 30px 30px;
-}
-.contact-right {
-    flex-basis: 4%;
-    padding: 40px;
-    background-color: rgb(204, 0, 255);
-    margin-left: 40%;
+@media screen and (max-width: 830px) {
+ 
+        .contact-me h1  {
+            font-size: 24px; 
+            grid-column: 2/5; 
+            grid-row: auto; 
+        }
+        
+        .contact-me p {
+            font-size: 16px;
+            grid-column: 2/5;
+            grid-row: 2/3
+        }
+
+        .contact-me {
+            grid-row: ;
+        }
+
+        .reach-container {
+          scale: 0.9;
+        }
+        .contact-container {
+           scale: 0.9;
+        }
+
+        .input-field {
+            scale: 0.5;
+            margin-right: 50px;
+        }
+
+        .contact-container h1{
+font-size: 16px;
+        }
+
+        .reach-container p {
+            font-size: 16px;
+        }
+
+        .reach-container h2, h4, h6 {
+font-size: 12px;
+line-height: 1.2;
+        }
     
 }
 
-.contact-container p {
-    margin-bottom: 10px;
-    line-height: 1.3;
+
+
+/*WORK-PAGE*/
+
+
+.work {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    background: url(background.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+
 }
 
-.contact-container h2 {
+.work-container {
+    grid-column: 2/5;
+    grid-row: 1/5;
+    margin-top: 15vh;
+    background-color: #0000008c;
+    margin-bottom: 20vh;
+    flex-direction: row;
+    border-radius: 10px;
+}
+
+.category-work {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-container h1 {
+    color: white;
+    padding-left: 20px;
+    padding-top: 20px;
+    line-height: 2.5;
+    font-size: 34px;
+}
+
+.work-container p {
+    color: white;
+    padding-left: 20px;
+}
+
+.pictures-work {
+    width: 20%;       
+
+    transition: 2s;
+} 
+
+.pictures-work:hover {
+    scale: 120%;
+    border-radius: 15px;
+}
+
+.pictures-flyer {
+  width: 20%;  
+}
+
+.pictures-logo {
+    width: 20%;
+}
+.pictures-mag {
+    width: 20%;
+}
+
+.pictures-art {
+    width: 20%;
+}
+
+
+.category-work {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 590px) {
+
+.work-container p {
+    font-size: 12px;
+}
+.pictures-work {
+    width: 100%; 
+}
+
+.pictures-flyer {
+  width: 100%;  
+}
+
+.pictures-logo {
+    width: 100%;
+}
+.pictures-mag {
+    width: 100%;
+}
+
+.pictures-art {
+    width: 100%;
+}
+
+}
+/*CARTOON_INFO*/
+
+.cartoon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    background: url(background.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+
+}
+
+.cartoon-container {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    margin-top: 20vh;
+    background-color: transparent;
+   margin-left: 20px;
+
+
+}
+
+.picture-cartoon {
+    grid-column: 2/2;
+    grid-row: 1/2;
+    color: rgb(255, 255, 255);
+    margin-top: 80px;
     
-    line-height: 1.8;
-}
-
-.row {
-    display: flex; 
-    justify-content: space-between;
-    margin-bottom: 20%;
+    
 
 }
 
-.group .row {
-    flex-basis: 45%;
-
+.cartoon-container h1 {
+    font-size: 42px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: rgb(255, 255, 255);
 }
 
-input {
-    width: 100€;
+.buttercup {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  
+}
+
+
+.buttercup:hover {
+    transition: .8s;
+    transform: scale(1.3);
+    }
+
+.buttercup-text p {
+    color: #000000;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    font-weight: 600;
+}
+
+.buttercup-text {
+    margin-top: 3em;
+}
+
+.buttercup-text h2{
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 590px) {
+    .cartoon-container h1{
+font-size: 32px;
+    }
+    .buttercup {
+        width: 150px;
+    }
+    .buttercup-text p {
+        font-size: small;
+    }
 }
 
