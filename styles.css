@@ -414,6 +414,7 @@ width: 100%;
     background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(133, 109, 176) 100%);
     background-size: cover;
     background-attachment: fixed;
+    justify-self: center;
 }
 
 
@@ -447,7 +448,7 @@ width: 100%;
     justify-content: center;
     align-items: center;
     gap: 70px;
-    height: 100vh;
+    height: 140vh;
 }
 
 .grid img {
@@ -475,7 +476,7 @@ width: 100%;
     left: 0;
   }
   
-  .lightbox-content {
+.lightbox-content {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -552,7 +553,7 @@ width: 100%;
     scale: 1.1;
 }
 .container {
-    width: 100%;
+    width: fit-content;
     height: 500vh;
     row-gap: 40px;
 }
