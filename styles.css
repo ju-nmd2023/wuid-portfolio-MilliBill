@@ -532,7 +532,7 @@ width: 100%;
 
 }
 
-  @media  screen and (max-width: 1000px) {
+@media  screen and (max-width: 1000px) {
 
 
 .grid { 
@@ -559,11 +559,26 @@ width: 100%;
 }
 
 #lightbox-image {
-    margin-top: 500px;
+    margin-top: 100px;
     scale: 1.5;
     max-width: 40%;
    
 }
+
+#lightbox {
+    margin-right: 50px;
+}
+
+#lightbox-caption {
+    color: #000000;
+    text-align: center;
+    max-width: 800px;
+    margin-top: 10vh;
+    margin-left: 50px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    font-weight: lighter;
+  }
 
 
 .container h1 {
@@ -582,12 +597,11 @@ width: 100%;
     font-family: poppins;
     width: 500px;
     padding: 60px;
-    margin-left: 0px;
 
 }
 
 .close {
-    scale: 2.5;
+    scale: 1.5;
 }
 
  }
